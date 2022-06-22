@@ -25,8 +25,8 @@ Conflicts: libva-vdpau-driver-vp9%{?_isa}
 # Alternative name that better describes the API involved
 Provides: nvdec-vaapi-driver = %{version}-%{release}
 
-
-Requires: (xorg-x11-drv-nvidia-cuda-libs%{_isa} or xorg-x11-drv-nvidia-470xx-cuda-libs%{_isa})
+# We will use Recommends instead
+#Requires: (xorg-x11-drv-nvidia-cuda-libs%%{_isa} or xorg-x11-drv-nvidia-470xx-cuda-libs%%{_isa})
 
 %description
 This is a VA-API implementation that uses NVDEC as a backend.

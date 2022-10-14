@@ -1,6 +1,6 @@
 Name:           nvidia-vaapi-driver
-Version:        0.0.6
-Release:        12%{?dist}
+Version:        0.0.7
+Release:        1%{?dist}
 Summary:        VA-API implementation that uses NVDEC as a backend
 
 License:        MIT
@@ -51,6 +51,9 @@ This is a VA-API implementation that uses NVDEC as a backend.
 
 
 %changelog
+* Fri Oct 14 2022 Nicolas Chauvet <kwizart@gmail.com> - 0.0.7-1
+- Update to 0.0.7
+
 * Mon Aug 08 2022 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 0.0.6-12
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_37_Mass_Rebuild and ffmpeg
   5.1

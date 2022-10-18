@@ -20,7 +20,8 @@ BuildRequires:  pkgconfig(gstreamer-codecparsers-1.0)
 Requires: mesa-filesystem%{?_isa}
 
 # The nvidia_drv_video.so symlink is also provided by theses packages
-Conflicts: libva-vdpau-driver%{?_isa}
+# since release 200, the symlink is dropped
+Conflicts: libva-vdpau-driver%{?_isa} < 0.7.4-200
 Conflicts: libva-vdpau-driver-vp9%{?_isa}
 # Alternative name that better describes the API involved
 Provides: nvdec-vaapi-driver = %{version}-%{release}

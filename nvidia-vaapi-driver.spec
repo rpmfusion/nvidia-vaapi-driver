@@ -1,6 +1,6 @@
 Name:           nvidia-vaapi-driver
 Version:        0.0.7
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        VA-API implementation that uses NVDEC as a backend
 
 License:        MIT
@@ -52,6 +52,9 @@ This is a VA-API implementation that uses NVDEC as a backend.
 
 
 %changelog
+* Tue Oct 18 2022 Nicolas Chauvet <kwizart@gmail.com> - 0.0.7-2
+- Bump
+
 * Fri Oct 14 2022 Nicolas Chauvet <kwizart@gmail.com> - 0.0.7-1
 - Update to 0.0.7
 

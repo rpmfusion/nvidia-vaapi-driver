@@ -16,6 +16,7 @@ BuildRequires:  meson
 BuildRequires:  pkgconfig(egl)
 BuildRequires:  pkgconfig(ffnvcodec)
 BuildRequires:  pkgconfig(gstreamer-codecparsers-1.0)
+BuildRequires:  pkgconfig(libdrm)
 
 Requires: mesa-filesystem%{?_isa}
 

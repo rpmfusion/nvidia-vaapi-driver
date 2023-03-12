@@ -1,0 +1,26 @@
+From 933d1e6d528b7f66f348dbf8579fe38789232cc0 Mon Sep 17 00:00:00 2001
+From: Nicolas Chauvet <kwizart@gmail.com>
+Date: Sun, 12 Mar 2023 20:46:52 +0100
+Subject: [PATCH] Fix build on i686 using a cast
+
+Signed-off-by: Nicolas Chauvet <kwizart@gmail.com>
+---
+ src/vabackend.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/vabackend.c b/src/vabackend.c
+index fe838f99a046..ad5e53fa6854 100644
+--- a/src/vabackend.c
++++ b/src/vabackend.c
+@@ -415,7 +415,7 @@ static void* resolveSurfaces(void *param) {
+         if (CHECK_CUDA_RESULT(cv->cuvidMapVideoFrame(ctx->decoder, surface->pictureIdx, &deviceMemory, &pitch, &procParams))) {
+             continue;
+         }
+-        LOG("Mapped surface %d to %llX (%d)", surface->pictureIdx, deviceMemory, pitch);
++        LOG("Mapped surface %d to %llX (%d)", surface->pictureIdx, (unsigned long long) deviceMemory, pitch);
+ 
+         //update cuarray
+         drv->backend->exportCudaPtr(drv, deviceMemory, surface, pitch);
+-- 
+2.39.2
+

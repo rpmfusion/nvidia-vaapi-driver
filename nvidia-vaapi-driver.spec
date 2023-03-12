@@ -6,6 +6,7 @@ Summary:        VA-API implementation that uses NVDEC as a backend
 License:        MIT
 URL:            https://github.com/elFarto/nvidia-vaapi-driver/
 Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
+Patch0:         0001-Fix-build-on-i686-using-a-cast.patch
 
 # Nvidia driver is only available on theses arches
 ExclusiveArch:  x86_64 i686 aarch64 ppc64le

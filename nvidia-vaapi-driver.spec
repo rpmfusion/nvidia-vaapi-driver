@@ -1,12 +1,11 @@
 Name:           nvidia-vaapi-driver
-Version:        0.0.9
+Version:        0.0.10
 Release:        1%{?dist}
 Summary:        VA-API implementation that uses NVDEC as a backend
 
 License:        MIT
 URL:            https://github.com/elFarto/nvidia-vaapi-driver/
 Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
-Patch0:         0001-Fix-build-on-i686-using-a-cast.patch
 
 # Nvidia driver is only available on theses arches
 ExclusiveArch:  x86_64 i686 aarch64 ppc64le
@@ -54,6 +53,9 @@ This is a VA-API implementation that uses NVDEC as a backend.
 
 
 %changelog
+* Mon Jun 26 2023 Nicolas Chauvet <kwizart@gmail.com> - 0.0.10-1
+- Update to 0.0.10
+
 * Sun Mar 12 2023 Nicolas Chauvet <kwizart@gmail.com> - 0.0.9-1
 - Update to 0.0.9
 
